@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>부천 라이프 — 부천의 모든 생활정보를 한곳에</title>
+    <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="css/design-tokens.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== Sticky site header ===== -->
+    <header class="siteheader" data-header>
+      <div class="siteheader__inner">
+        <a class="siteheader__brand" href="#top" aria-label="부천 라이프 홈">
+          <span class="siteheader__mark"
+            ><img src="assets/logo-symbol.svg" alt=""
+          /></span>
+          <span class="siteheader__name">BUCHEON LIFE</span>
+        </a>
+        <nav class="siteheader__nav" aria-label="주요 섹션">
+          <a href="#feed">맞춤 추천</a>
+          <a href="#ai">AI 라이프</a>
+          <a href="#culture">문화 생활</a>
+          <a href="#community">커뮤니티</a>
+          <a href="#challenge">챌린지</a>
+        </nav>
+        <a class="siteheader__cta" href="#cta">앱 시작하기</a>
+        <button
+          class="siteheader__burger"
+          type="button"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+          data-burger
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="mobnav" data-mobnav aria-label="모바일 메뉴">
+      <a href="#feed">맞춤 추천</a>
+      <a href="#ai">AI 라이프</a>
+      <a href="#culture">문화 생활</a>
+      <a href="#community">커뮤니티</a>
+      <a href="#challenge">챌린지</a>
+      <a class="mobnav__cta" href="#cta">앱 시작하기</a>
+    </nav>
+
+    <main class="page">
+      <!-- ===== PC_1 · HERO ===== -->
+      <section
+        class="section section--hero"
+        data-section="hero"
+        aria-label="부천 라이프 소개"
+      >
+        <div class="section__inner" style="height: 720px">
+          <figure
+            class="hero__phone-mo"
+            aria-hidden="true"
+            data-reveal
+            data-tilt
+          >
+            <span class="hero__phone-mo__crop"
+              ><img src="assets/mo1-hero.png" alt="부천 라이프 앱 목업"
+            /></span>
+          </figure>
+          <a class="logo" href="#top" data-reveal>
+            <span class="logo__mark"
+              ><img src="assets/logo-symbol.svg" alt=""
+            /></span>
+            <span class="logo__text">BUCHEON LIFE</span>
+          </a>
+
+          <h1 class="hero__title" data-reveal>
+            부천의 모든<br />생활정보를 한곳에
+            <span class="accent--bright">부천 라이프</span>
+          </h1>
+
+          <figure class="hero__phone" data-reveal data-tilt data-tilt-f="22">
+            <img
+              src="assets/hero-phone.png"
+              alt="부천 라이프 앱 로그인 화면 목업"
+            />
+          </figure>
+
+          <div class="hero__qr" data-reveal>
+            <div class="hero__qr-img" aria-hidden="true">
+              <img src="assets/qr-arrow.png" />
+            </div>
+            <div class="hero__qr-label">
+              <span class="hero__qr-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15 5l-7 7 7 7"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <p>
+                <b class="accent--bright">QR코드로</b>부천 정보 한눈에 보러가기
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PC_2 · INTRO ===== -->
+      <section class="section section--intro" data-section="intro">
+        <div class="section__inner" style="height: 600px">
+          <h2 class="intro__title" data-reveal>
+            부천의 모든 것이<br class="br-mo" />
+            한 앱에.
+          </h2>
+          <p class="intro__body" data-reveal>
+            한 곳에 모으고, 나에게 맞추고, 함께 즐기고!<br />
+            맞춤 추천부터, 커뮤니티, 챌린지까지<br />
+            부천 시민의 일상이 한층 가벼워집니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PC_3 · 맞춤 추천 피드 ===== -->
+      <section id="feed" class="section section--feed" data-section="feed">
+        <div class="section__inner" style="height: 994px">
+          <p class="eyebrow" style="left: 320px; top: 120px" data-reveal>
+            맞춤 추천 피드
+          </p>
+          <h2 class="feed__title" style="left: 320px; top: 158px" data-reveal>
+            오늘 뭐 할지,<br />매일 <span class="accent">고민하셨나요?</span>
+          </h2>
+          <p class="lead" style="left: 320px; top: 314px" data-reveal>
+            <b>관심사</b> · <b>위치</b> · <b>날씨</b>를 체크하고<br />
+            나에게 맞는 부천 콘텐츠를 <b>데일리로 추천</b>해드려요.
+          </p>
+
+          <div
+            class="phone"
+            style="left: 909px; top: 72px; width: 392px; height: 850px"
+            data-reveal
+            data-parallax="-0.08"
+          >
+            <div
+              class="phone__screen"
+              style="
+                left: 11px;
+                top: 8px;
+                width: 370px;
+                height: 834px;
+                border-radius: 47px;
+              "
+            >
+              <img
+                src="assets/pc3-screen.png"
+                alt="맞춤 추천 피드 앱 화면"
+                style="height: 96.41%; top: 3.6%; width: 100%"
+              />
+            </div>
+            <img class="phone__device" src="assets/pc3-phone.png" alt="" />
+          </div>
+
+          <figure
+            class="float-card"
+            style="left: 1260px; top: 251px; width: 327px; height: 315px"
+            data-reveal
+            data-float="6"
+          >
+            <img src="assets/pc3-card.png" alt="추천 콘텐츠 카드" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== PC_4 · 알려줘 AI 라이프 ===== -->
+      <section id="ai" class="section section--ai" data-section="ai">
+        <div class="section__inner" style="height: 994px">
+          <div
+            class="phone"
+            style="left: 524px; top: 72px; width: 392px; height: 850px"
+            data-reveal
+            data-parallax="-0.06"
+          >
+            <div
+              class="phone__screen"
+              style="
+                left: 10px;
+                top: 9px;
+                width: 371px;
+                height: 831px;
+                border-radius: 49px;
+              "
+            >
+              <img
+                src="assets/pc4-screen.png"
+                alt="AI 라이프 챗봇 대화 화면"
+                style="height: 96.87%; top: 3.15%; width: 100.09%; left: -0.04%"
+              />
+            </div>
+            <img class="phone__device" src="assets/pc4-phone.png" alt="" />
+          </div>
+
+          <!-- 떠있는 채팅 말풍선 -->
+          <div
+            class="chip"
+            style="left: 320px; top: 314px"
+            data-reveal
+            data-float="5"
+          >
+            <span class="chip__avatar"
+              ><img src="assets/pc4-mascot.png" alt=""
+            /></span>
+          </div>
+          <p class="chip__name" style="left: 384px; top: 325px" data-reveal>
+            라이프
+          </p>
+
+          <div
+            class="bubble bubble--green"
+            style="left: 753px; top: 307px"
+            data-reveal
+            data-float="7"
+          >
+            <p>우리 강아지랑 근처에 다녀올만한<br />애견카페 좀 찾아줄래?</p>
+          </div>
+
+          <div
+            class="bubble bubble--white"
+            style="left: 320px; top: 374px"
+            data-reveal
+            data-float="6"
+          >
+            <p>
+              빗소리 들으며 커피 한잔의<br />여유를 아는 감각적인 김부천을
+              위해<br />카페를 추천할게!
+            </p>
+          </div>
+
+          <p class="eyebrow" style="left: 1090px; top: 120px" data-reveal>
+            알려줘 AI 라이프!
+          </p>
+          <h2 class="feed__title" style="left: 1090px; top: 158px" data-reveal>
+            비 와요<br /><span class="accent">”근처 카페 추천해줘"</span>
+          </h2>
+          <p class="lead" style="left: 1090px; top: 314px" data-reveal>
+            라이프 챗봇과 대화를 통해서<br />지금 이순간 내게 필요한 걸
+            알아보세요.
+          </p>
+
+          <figure
+            class="mascot"
+            style="left: 1090px; top: 433px; width: 510px; height: 450px"
+            data-reveal
+            data-parallax="0.05"
+          >
+            <img src="assets/pc4-chat.png" alt="부천 라이프 마스코트 캐릭터" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== PC_5 · 문화 생활 컨텐츠 ===== -->
+      <section
+        id="culture"
+        class="section section--culture"
+        data-section="culture"
+      >
+        <div class="section__bg" aria-hidden="true">
+          <div
+            class="section__bg-img"
+            style="background-image: url(&quot;assets/pc5-bg.png&quot;)"
+          ></div>
+          <div class="section__bg-grad"></div>
+        </div>
+        <div class="section__inner" style="height: 600px">
+          <p class="eyebrow" style="left: 320px; top: 93px" data-reveal>
+            문화 생활 컨텐츠
+          </p>
+          <h2
+            class="culture__title"
+            style="left: 320px; top: 131px"
+            data-reveal
+          >
+            이번 주말,<br class="br-pc" />부천에선<br class="br-mo" />
+            <span class="accent--bright">어떤 이벤트가?</span>
+          </h2>
+          <p
+            class="lead lead--light"
+            style="left: 320px; top: 396px"
+            data-reveal
+          >
+            <span class="dim">추천 · 문화 · 공연 · 축제등 </span>부천의 정보를
+            한 화면에서.<br />
+            <span class="dim"
+              >더이상 시청 · 문화재단 · SNS를 따로 뒤지지 마세요!</span
+            >
+          </p>
+
+          <div
+            class="phone"
+            style="left: 1098px; top: 60px; width: 392px; height: 850px"
+            data-reveal
+            data-parallax="-0.08"
+          >
+            <div
+              class="phone__screen"
+              style="
+                left: 10px;
+                top: 9px;
+                width: 371px;
+                height: 842px;
+                border-radius: 50px;
+              "
+            >
+              <img
+                src="assets/pc5-screen.png"
+                alt="문화 생활 컨텐츠 앱 화면"
+                style="height: 95.52%; top: 4.49%; width: 100%"
+              />
+            </div>
+            <img class="phone__device" src="assets/pc5-phone.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PC_6 · 동네 커뮤니티 ===== -->
+      <section
+        id="community"
+        class="section section--community"
+        data-section="community"
+      >
+        <div class="section__inner" style="height: 600px">
+          <article
+            class="review"
+            style="left: 320px; top: 140px"
+            data-reveal
+            data-float="5"
+          >
+            <div class="review__thumb">
+              <img src="assets/pc6-thumb1.png" alt="" />
+            </div>
+            <p class="review__tag">맛집</p>
+            <p class="review__title">
+              부천 옥길 브런치카페<br />다녀왔는데 솔직 후기 남겨요~
+            </p>
+            <div class="review__meta">
+              <span class="review__avatar"
+                ><img src="assets/pc6-avatar.png" alt=""
+              /></span>
+              <span class="review__name">뽀삐맘</span>
+            </div>
+            <span class="review__date">26.04.06</span>
+          </article>
+
+          <article
+            class="review"
+            style="left: 540px; top: 213px"
+            data-reveal
+            data-float="7"
+          >
+            <div class="review__thumb">
+              <img src="assets/pc6-thumb2.png" alt="" />
+            </div>
+            <p class="review__tag">병원</p>
+            <p class="review__title">
+              역곡이나 소사 근처 과잉진료<br />없는 동물병원 추천좀용
+            </p>
+            <div class="review__meta">
+              <span class="review__avatar"
+                ><img src="assets/pc6-avatar.png" alt=""
+              /></span>
+              <span class="review__name">소사개집사</span>
+            </div>
+            <span class="review__date">26.04.06</span>
+          </article>
+
+          <article
+            class="review"
+            style="left: 366px; top: 324px"
+            data-reveal
+            data-float="6"
+          >
+            <div class="review__thumb">
+              <img src="assets/pc6-thumb3.png" alt="" />
+            </div>
+            <p class="review__tag">정보</p>
+            <p class="review__title">
+              뭉이랑 소사 애견카페<br />뽀독 다녀왔어요 ㅎㅎ
+            </p>
+            <div class="review__meta">
+              <span class="review__avatar"
+                ><img src="assets/pc6-avatar.png" alt=""
+              /></span>
+              <span class="review__name">Minsu78</span>
+            </div>
+            <span class="review__date">26.02.29</span>
+          </article>
+
+          <p class="eyebrow" style="left: 1090px; top: 167px" data-reveal>
+            동네 커뮤니티
+          </p>
+          <h2 class="feed__title" style="left: 1090px; top: 205px" data-reveal>
+            부천 이웃 끼리<br /><span class="accent">다시 가까이</span>
+          </h2>
+          <p class="lead" style="left: 1090px; top: 361px" data-reveal>
+            이웃끼리 동네 후기 · 정보, 모임을 공유해요.<br />
+            커뮤니티를 통해 소통하고 더 가까워지세요!
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PC_7 · 챌린지 · 포인트 ===== -->
+      <section
+        id="challenge"
+        class="section section--challenge"
+        data-section="challenge"
+      >
+        <div class="section__inner" style="height: 1115px">
+          <p class="eyebrow eyebrow--center" style="top: 93px" data-reveal>
+            챌린지 · 포인트
+          </p>
+          <h2 class="challenge__title" style="top: 131px" data-reveal>
+            걸을수록<br class="br-mo" />
+            <span class="accent">받아가는 부천</span>
+          </h2>
+          <p class="lead lead--center" style="top: 225px" data-reveal>
+            걷기 챌린지로, 다양한 리워드를 얻어가세요.<br />
+            부천에서 움직이는 모든 순간이 보상이 됩니다.
+          </p>
+
+          <figure
+            class="shoe"
+            style="left: 320px; top: 436px; width: 309px; height: 295px"
+            data-reveal
+            data-shoe
+          >
+            <img src="assets/pc7-img109.png" alt="옐로우 슬리퍼 리워드" />
+          </figure>
+          <figure
+            class="shoe"
+            style="left: 760px; top: 353px; width: 400px; height: 409px"
+            data-reveal
+            data-shoe
+          >
+            <img src="assets/pc7-img105.png" alt="그린 슬리퍼 리워드" />
+          </figure>
+          <figure
+            class="shoe"
+            style="left: 1310px; top: 436px; width: 290px; height: 295px"
+            data-reveal
+            data-shoe
+          >
+            <img src="assets/pc7-img108.png" alt="블루 스니커즈 리워드" />
+          </figure>
+
+          <div class="track">
+            <div
+              class="track__rail"
+              style="left: 467px; top: 818px; width: 1133px"
+            ></div>
+            <div
+              class="track__fill"
+              style="left: 320px; top: 818px"
+              data-progress="1280"
+              data-progress-mo="332"
+            ></div>
+          </div>
+
+          <span class="marker" style="left: 450px; top: 806px"></span>
+          <span class="marker" style="left: 936px; top: 806px"></span>
+          <span class="marker" style="left: 1431px; top: 806px"></span>
+          <span
+            class="marker__dot marker__dot--gold"
+            style="left: 462px; top: 818px"
+          ></span>
+          <span
+            class="marker__dot marker__dot--green"
+            style="left: 948px; top: 818px"
+          ></span>
+
+          <p class="track__label" style="left: 430px; top: 874px">획득 완료</p>
+          <p class="track__label" style="left: 916px; top: 874px">획득 완료</p>
+
+          <div
+            class="gs25"
+            style="left: 1380px; top: 874px"
+            data-reveal
+            data-float="5"
+          >
+            <img src="assets/pc7-gs25.png" alt="GS25 상품권" />
+          </div>
+          <p
+            class="track__label track__label--strong"
+            style="left: 1389px; top: 978px"
+          >
+            100보 더!<br />GS25 상품권
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PC_8 · CTA ===== -->
+      <section id="cta" class="section section--cta" data-section="cta">
+        <div class="cta__bg" aria-hidden="true">
+          <img src="assets/pc8-bg.png" alt="" />
+          <div class="cta__bg-grad"></div>
+        </div>
+        <div class="section__inner" style="height: 600px">
+          <h2 class="cta__title" style="left: 320px; top: 198px" data-reveal>
+            부천 살이,<br />이렇게 편할줄 몰랐죠?
+          </h2>
+          <p class="cta__body" style="left: 320px; top: 379px" data-reveal>
+            지금, 부천 라이프와 함께 시작해보세요.
+          </p>
+
+          <div
+            class="cta__badge cta__badge--logo"
+            style="left: 1200px; top: 220px"
+            data-reveal
+          >
+            <span class="cta__logo"
+              ><img src="assets/logo-symbol.svg" alt="부천 라이프 로고"
+            /></span>
+          </div>
+          <div
+            class="cta__badge cta__badge--blank"
+            style="left: 1404px; top: 220px"
+            data-reveal
+          >
+            <img src="assets/qr-arrow.png" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <span id="top" hidden></span>
+    <script src="js/main.js"></script>
+  </body>
+</html>

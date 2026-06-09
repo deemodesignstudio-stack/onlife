@@ -1,0 +1,85 @@
+/* ============================================================
+   부천 라이프 — Design Tokens (Figma 실측값, 반올림 금지)
+   Figma file KI5OHjJn6PCcbR9fu2zY6F · frame 441:258
+   ============================================================ */
+:root {
+  /* ---- Color : surfaces ---- */
+  --c-hero-bg:      #1f1f1e;   /* PC_1 hero */
+  --c-mint-50:      #f3fff0;   /* PC_2 */
+  --c-white:        #ffffff;   /* PC_3, PC_7 */
+  --c-mint-100:     #eafaee;   /* PC_4, PC_6 */
+  --c-green:        #6fd55f;   /* PC_8 / primary accent on dark */
+  --c-black:        #000000;   /* PC_5 base */
+
+  /* ---- Color : text ---- */
+  --c-ink:          #232323;
+  --c-ink-80:       rgba(35, 35, 35, 0.8);
+  --c-ink-70:       rgba(35, 35, 35, 0.7);
+  --c-ink-50:       rgba(35, 35, 35, 0.5);
+  --c-light:        #f4f4f4;   /* heading on dark */
+  --c-white-70:     rgba(255, 255, 255, 0.7);
+
+  /* ---- Color : accent ---- */
+  --c-accent:       #6fd55f;   /* bright green on dark bg */
+  --c-accent-deep:  #2d8b1f;   /* deep green on light bg */
+
+  /* ---- Color : components ---- */
+  --c-qr:           #d9d9d9;
+  --c-card-f3:      #f3f3f3;
+  --c-border-soft:  #ededed;
+  --c-border-e7:    #e7e7e7;
+  --c-border-de:    #dedede;
+  --c-border-b4:    #b4b9c0;
+  --c-track:        #f1f1f1;
+
+  /* ---- Progress gradient (PC_7) ---- */
+  --grad-progress:  linear-gradient(90deg, #ffcf36 0%, #81eb71 51.442%, #4181f9 100%);
+
+  /* ---- Typography ---- */
+  --font: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  --fs-hero:    56px;   /* PC_1 / PC_2 / PC_8 headings */
+  --fs-h2:      48px;   /* section headings */
+  --fs-logo:    24px;
+  --fs-eyebrow: 20px;
+  --fs-lead-32: 32px;
+  --fs-lead-28: 28px;
+  --fs-lead-24: 24px;
+  --fs-qr:      18px;
+
+  --lh-tight:   1.3;
+  --lh-body:    1.4;
+  --ls-logo:   -0.48px;
+
+  /* ---- Radius ---- */
+  --r-logo:   3.733px;
+  --r-qr:     16px;
+  --r-bubble: 18.2px;
+  --r-card:   12px;
+  --r-badge-28: 28px;
+  --r-badge-20: 20px;
+  --r-track:  32px;
+  --r-gs25:   7px;
+
+  /* ---- Shadow ---- */
+  --sh-bubble:  2px 8px 8px 0 rgba(0, 0, 0, 0.16);
+  --sh-card:    0px 9.275px 4.638px rgba(0, 0, 0, 0.16);
+  --sh-shoe-s:  0px 15.763px 15.763px 0 rgba(0, 0, 0, 0.25);
+  --sh-shoe-m:  0px 16px 16px 0 rgba(0, 0, 0, 0.16);
+  --sh-badge:   0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --sh-track-inset: inset 0px 2px 8px 0 rgba(0, 0, 0, 0.16);
+
+  /* ---- Layout ---- */
+  --frame-w:   1920px;
+  --gutter:    320px;   /* 좌측 콘텐츠 기준선 */
+  --col-w:     510px;   /* 텍스트 컬럼 폭 */
+
+  /* ---- Motion ---- */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft:  cubic-bezier(0.4, 0, 0.2, 1);
+  --dur:        0.8s;
+}

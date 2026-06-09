@@ -1,0 +1,1565 @@
+/* ============================================================
+   부천 라이프 — PC Landing  (PC 전용 · 기준폭 1920)
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-hero-bg);
+}
+body {
+  font-family: var(--font);
+  color: var(--c-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-width: var(--frame-w);
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+:lang(ko),
+.page {
+  word-break: keep-all;
+}
+
+/* ---- Section frame : bg full-bleed, content 1920 centered ---- */
+.section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.section__inner {
+  position: relative;
+  width: var(--frame-w);
+  flex: 0 0 var(--frame-w);
+}
+/* every direct child is positioned with Figma coords (inline or class) */
+.section__inner > * {
+  position: absolute;
+}
+
+.section--hero {
+  background: var(--c-hero-bg);
+}
+.section--intro {
+  background: var(--c-mint-50);
+}
+.section--feed {
+  background: var(--c-white);
+}
+.section--ai {
+  background: var(--c-mint-100);
+}
+.section--culture {
+  background: var(--c-black);
+}
+.section--community {
+  background: var(--c-mint-100);
+}
+.section--challenge {
+  background: var(--c-white);
+}
+.section--cta {
+  background: var(--c-green);
+}
+
+/* ---- Shared type helpers ---- */
+.accent {
+  color: var(--c-accent-deep);
+}
+.accent--bright {
+  color: var(--c-accent);
+}
+
+.eyebrow {
+  width: var(--col-w);
+  margin: 0;
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  color: var(--c-accent-deep);
+}
+.eyebrow--center {
+  left: 0;
+  right: 0;
+  width: auto;
+  text-align: center;
+}
+
+.lead {
+  width: var(--col-w);
+  margin: 0;
+  font-size: var(--fs-lead-24);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--c-ink-70);
+}
+.lead b {
+  font-weight: var(--fw-bold);
+}
+.lead--center {
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: var(--fs-lead-28);
+  line-height: var(--lh-tight);
+  text-align: center;
+}
+.lead--light {
+  color: #fff;
+}
+.lead--light .dim {
+  color: var(--c-white-70);
+}
+
+/* section heading shared (48px) */
+.feed__title,
+.culture__title,
+.challenge__title {
+  width: var(--col-w);
+  margin: 0;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  color: var(--c-ink);
+}
+.culture__title {
+  color: var(--c-light);
+}
+.challenge__title {
+  left: 0;
+  right: 0;
+  width: auto;
+  text-align: center;
+}
+
+/* ============================================================
+   PC_1 · HERO
+   ============================================================ */
+.logo {
+  left: 320px;
+  top: 113px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 29px;
+}
+.logo__mark {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+  background: #fff;
+  border-radius: var(--r-logo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__mark img {
+  width: 17.42px;
+  height: 17.42px;
+  object-fit: contain;
+}
+.logo__text {
+  font-size: var(--fs-logo);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-logo);
+  color: var(--c-accent);
+  white-space: nowrap;
+}
+
+.hero__title {
+  left: 320px;
+  top: 166px;
+  width: var(--col-w);
+  margin: 0;
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  color: var(--c-light);
+}
+.hero__title .accent--bright {
+  display: block;
+}
+
+.hero__phone {
+  left: 870px;
+  top: 70px;
+  width: 769px;
+  height: 678px;
+  margin: 0;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+.hero__phone img {
+  width: 130%;
+  object-fit: contain;
+}
+
+.hero__qr {
+  left: 320px;
+  top: 457px;
+  width: 414px;
+  height: 180px;
+}
+.hero__qr-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 180px;
+  background: var(--c-qr);
+  border-radius: var(--r-qr);
+}
+.hero__qr-label {
+  position: absolute;
+  left: 204px;
+  top: 122px;
+  width: 210px;
+  height: 50px;
+}
+.hero__qr-label p {
+  margin: 0;
+  padding-left: 26px;
+  font-size: var(--fs-qr);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-body);
+  color: var(--c-light);
+  white-space: nowrap;
+}
+.hero__qr-arrow {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(90deg);
+  opacity: 0.8;
+}
+.hero__qr-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   PC_2 · INTRO  (centered)
+   ============================================================ */
+.intro__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 184px;
+  text-align: center;
+  margin: 0;
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  color: var(--c-ink);
+  white-space: nowrap;
+}
+.intro__body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 281px;
+  margin: 0;
+  font-size: var(--fs-lead-32);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--c-ink-70);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Phone mockup (PC_3 / PC_4 / PC_5)
+   ============================================================ */
+.phone {
+  position: absolute;
+}
+.phone__device {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1; /* 뒤쪽 글로우/디바이스 백 레이어 */
+  pointer-events: none;
+}
+.phone__screen {
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  z-index: 2; /* 화면(흰 바디 + 스크린샷) 앞 */
+}
+.phone__screen img {
+  position: absolute;
+  left: 0;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* floating recommendation card (PC_3) */
+.float-card {
+  position: absolute;
+  margin: 0;
+  z-index: 3;
+}
+.float-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ============================================================
+   PC_4 · AI chat bubbles
+   ============================================================ */
+.mascot {
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
+}
+.mascot img {
+  position: absolute;
+  width: 86.99%;
+  height: 141.52%;
+  left: 12.58%;
+  top: -17.27%;
+  max-width: none;
+  object-fit: contain;
+}
+
+.bubble {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: var(--r-bubble);
+  box-shadow: var(--sh-bubble);
+  z-index: 4;
+}
+.bubble p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+}
+.bubble--green {
+  background: var(--c-green);
+}
+.bubble--green p {
+  color: var(--c-ink);
+  text-align: right;
+  white-space: nowrap;
+}
+.bubble--white {
+  background: #fff;
+  border: 1px solid var(--c-border-de);
+}
+.bubble--white p {
+  color: var(--c-ink-80);
+  white-space: nowrap;
+}
+
+.chip {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--c-border-e7);
+  border-radius: 170px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 4;
+}
+.chip__avatar {
+  position: absolute;
+  inset: 0;
+}
+.chip__avatar img {
+  position: absolute;
+  left: -4px;
+  top: -8px;
+  width: 63px;
+  height: 91px;
+  object-fit: cover;
+}
+.chip__name {
+  position: absolute;
+  margin: 0;
+  font-size: var(--fs-lead-24);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-body);
+  color: var(--c-ink-70);
+  white-space: nowrap;
+  z-index: 4;
+}
+
+/* ============================================================
+   PC_5 · 문화 생활 (bg image + gradient)
+   ============================================================ */
+.section--culture .section__bg {
+  position: absolute;
+  inset: 0;
+}
+.section__bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: 60% 30%;
+  opacity: 0.6;
+}
+.section__bg-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+/* ============================================================
+   PC_6 · 커뮤니티 review cards
+   ============================================================ */
+.review {
+  position: absolute;
+  width: 400px;
+  height: 136px;
+  margin: 0;
+  background: #fff;
+  border-radius: var(--r-card);
+  filter: drop-shadow(0px 9.275px 4.638px rgba(0, 0, 0, 0.16));
+  z-index: 1;
+}
+.review__thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 136px;
+  height: 100%;
+  border-top-left-radius: 13.913px;
+  border-bottom-left-radius: 13.913px;
+  overflow: hidden;
+}
+.review__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.review__tag {
+  position: absolute;
+  left: 155.36px;
+  top: 18.55px;
+  width: 226px;
+  margin: 0;
+  font-size: 13.91px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.2782px;
+  color: var(--c-green);
+}
+.review__title {
+  position: absolute;
+  left: 155.36px;
+  top: 39.42px;
+  width: 226px;
+  height: 46.4px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 16.23px;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  letter-spacing: -0.3246px;
+  color: var(--c-ink-70);
+}
+.review__meta {
+  position: absolute;
+  left: 155.36px;
+  top: 95px;
+  display: flex;
+  align-items: flex-end;
+  gap: 9.275px;
+}
+.review__avatar {
+  width: 23.19px;
+  height: 23.19px;
+  border-radius: 89px;
+  overflow: hidden;
+}
+.review__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.review__name {
+  font-size: 16.23px;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--c-ink-50);
+  white-space: nowrap;
+}
+.review__date {
+  position: absolute;
+  left: 314.2px;
+  top: 95px;
+  font-size: 16.23px;
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--c-ink-50);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   PC_7 · 챌린지 · 포인트
+   ============================================================ */
+.shoe {
+  position: absolute;
+  margin: 0;
+}
+.shoe img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.shoe:nth-of-type(1) {
+  filter: drop-shadow(var(--sh-shoe-s));
+}
+
+.track__rail {
+  position: absolute;
+  height: 24px;
+  background: var(--c-track);
+  border-radius: var(--r-track);
+  box-shadow: var(--sh-track-inset);
+}
+.track__fill {
+  position: absolute;
+  height: 24px;
+  width: 0;
+  background: var(--grad-progress);
+  border-radius: var(--r-track);
+}
+.marker {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.14),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.06);
+}
+.marker__dot {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  z-index: 3;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+}
+.marker__dot--gold {
+  background: #f9d139;
+}
+.marker__dot--green {
+  background: #2d8b1f;
+}
+
+.track__label {
+  position: absolute;
+  margin: 0;
+  width: 89px;
+  font-size: var(--fs-lead-24);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--c-ink-50);
+  text-align: center;
+}
+.track__label--strong {
+  width: 129px;
+  color: var(--c-ink-80);
+}
+
+.gs25 {
+  position: absolute;
+  width: 148px;
+  height: 92px;
+  border-radius: var(--r-gs25);
+  overflow: hidden;
+  background: var(--c-qr);
+  z-index: 2;
+}
+.gs25 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   PC_8 · CTA
+   ============================================================ */
+.section--cta {
+  background: var(--c-green);
+}
+.cta__bg {
+  position: absolute;
+  left: 870px;
+  top: -3px;
+  width: 804px;
+  height: 603px;
+}
+.cta__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+.cta__bg-grad {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--c-green) 0%,
+    rgba(111, 213, 95, 0) 50%,
+    var(--c-green) 100%
+  );
+}
+.cta__title {
+  margin: 0;
+  width: var(--col-w);
+  font-size: var(--fs-hero);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  color: var(--c-ink);
+}
+.cta__body {
+  margin: 0;
+  width: var(--col-w);
+  font-size: var(--fs-lead-32);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-tight);
+  color: var(--c-ink-70);
+}
+.cta__badge {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+}
+.cta__badge--logo {
+  background: var(--c-card-f3);
+  border-radius: var(--r-badge-28);
+  box-shadow:
+    var(--sh-badge),
+    inset 0px 2px 4px 0px #fff;
+}
+.cta__logo {
+  position: absolute;
+  left: 24.67px;
+  top: 24.67px;
+  width: 130.67px;
+  height: 130.67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta__logo img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+.cta__badge--blank {
+  background: #fff;
+  border: 1px solid var(--c-border-b4);
+  border-radius: var(--r-badge-20);
+}
+
+/* ============================================================
+   Reveal / motion  (JS adds .is-in)
+   ============================================================ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+  will-change: opacity, transform;
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* floating loop — duration set by JS from data-float */
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.is-floating {
+  animation: floaty var(--float-dur, 6s) var(--ease-soft) infinite;
+}
+
+/* progress fill grows when in view */
+.track__fill {
+  transition: width 1.6s var(--ease-out);
+}
+
+/* ---- Hover polish ---- */
+.float-card,
+.review,
+.shoe,
+.gs25,
+.bubble,
+.cta__badge,
+.hero__qr-img {
+  transition:
+    transform 0.45s var(--ease-out),
+    box-shadow 0.45s var(--ease-out),
+    filter 0.45s var(--ease-out);
+}
+.review:hover {
+  transform: translateY(-8px) scale(1.015);
+}
+.shoe:hover {
+  transform: translateY(-10px) scale(1.04);
+}
+.float-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+.gs25:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+.bubble:hover {
+  transform: translateY(-3px);
+}
+.cta__badge:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.logo {
+  transition: transform 0.4s var(--ease-out);
+}
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .track__fill {
+    transition: none !important;
+  }
+  .is-floating,
+  * {
+    animation: none !important;
+  }
+  .review:hover,
+  .shoe:hover,
+  .float-card:hover,
+  .gs25:hover,
+  .bubble:hover,
+  .cta__badge:hover,
+  .logo:hover {
+    transform: none;
+  }
+  .siteheader {
+    transition: none !important;
+  }
+  .hero__qr-arrow {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   Sticky site header (SAIRO 벤치마크)
+   브랜드는 stuck 상태에서만 노출 → 히어로 내부 로고와 중복 방지
+   ============================================================ */
+.siteheader {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 200;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  transition:
+    height 0.32s var(--ease-out),
+    background 0.32s var(--ease-out),
+    box-shadow 0.32s var(--ease-out),
+    transform 0.4s var(--ease-out);
+}
+.siteheader__inner {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+.siteheader__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.32s var(--ease-out),
+    transform 0.32s var(--ease-out);
+  pointer-events: none;
+}
+.siteheader.is-stuck .siteheader__brand {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.siteheader__mark {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--c-border-soft);
+  border-radius: 7px;
+}
+.siteheader__mark img {
+  width: 13px;
+  height: 21px;
+  object-fit: contain;
+}
+.siteheader__name {
+  font-size: 19px;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-logo);
+  color: var(--c-ink);
+}
+.siteheader__nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.siteheader__nav a {
+  font-size: 16px;
+  font-weight: var(--fw-semibold);
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.25s var(--ease-out);
+}
+.siteheader.is-stuck .siteheader__nav a {
+  color: var(--c-ink-70);
+}
+.siteheader__nav a:hover {
+  color: var(--c-accent);
+}
+.siteheader.is-stuck .siteheader__nav a:hover {
+  color: var(--c-accent-deep);
+}
+.siteheader__cta {
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--c-accent);
+  color: #123c08;
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out),
+    background 0.25s var(--ease-out);
+}
+.siteheader__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(111, 213, 95, 0.42);
+}
+.siteheader.is-stuck {
+  height: 64px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+.siteheader.is-stuck .siteheader__cta {
+  background: var(--c-accent-deep);
+  color: #fff;
+}
+.siteheader.is-hidden {
+  transform: translateY(-100%);
+}
+.siteheader__burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.siteheader__burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition:
+    transform 0.3s var(--ease-out),
+    opacity 0.2s var(--ease-out),
+    background 0.3s var(--ease-out);
+}
+.siteheader.is-stuck .siteheader__burger span {
+  background: var(--c-ink);
+}
+
+/* ============================================================
+   Hero QR — 강조 문구 + 화살표 (PC_2 추가/보강)
+   ============================================================ */
+.hero__qr-label p {
+  display: flex;
+  flex-direction: column;
+}
+.hero__qr-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-accent);
+  transform: none;
+  animation: qrNudge 1.6s var(--ease-soft) infinite;
+}
+.hero__qr-arrow svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.hero__qr-arrow img {
+  display: none;
+}
+@keyframes qrNudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+/* ============================================================
+   Footer / CTA 로고 심볼 비율 보정 (PC_8)
+   강제 정사각 박스 제거 → 단축(가로)축 sizing + 세로 auto
+   ============================================================ */
+.cta__logo img {
+  width: auto;
+  height: 78%;
+  max-width: 56%;
+  object-fit: contain;
+}
+
+/* ============================================================
+   Hero 모바일 목업 (MO_1) — PC 에서는 숨김
+   ============================================================ */
+.hero__phone-mo {
+  display: none;
+}
+.hero__phone-mo__crop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: block;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+.hero__phone-mo__crop img {
+  position: absolute;
+  top: 0;
+  left: -34.09%;
+  width: 156.56%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* mouse-parallax layer hook (JS sets --mx/--my) */
+[data-tilt] {
+  transition: transform 0.3s var(--ease-soft);
+}
+
+/* PC/Mobile 줄바꿈 토글 (Figma 줄바꿈 위치가 PC·Mobile 상이) */
+.br-mo {
+  display: none;
+}
+.br-pc {
+  display: inline;
+}
+
+/* ============================================================
+   ============================================================
+   MOBILE  (Figma Mobile frame 461:48 · 기준폭 375)
+   PC 고정 캔버스(1920)와 동일 패러다임으로 375 캔버스를 JS zoom 으로 맞춤.
+   섹션 자식은 절대배치 유지하고 좌표만 모바일 값으로 override.
+   ============================================================ */
+@media (max-width: 768px) {
+  body {
+    min-width: 0;
+  }
+  .br-mo {
+    display: inline;
+  }
+  .br-pc {
+    display: none;
+  }
+
+  /* 모바일은 375 캔버스 */
+  .section {
+    overflow: hidden;
+  }
+  .section__inner {
+    width: 375px !important;
+    flex: 0 0 375px !important;
+  }
+
+  /* 헤더: 네비 숨기고 버거 노출, 브랜드 항상 노출 */
+  .siteheader {
+    height: 64px;
+  }
+  .siteheader__inner {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  .siteheader__nav,
+  .siteheader__cta {
+    display: none;
+  }
+  .siteheader__burger {
+    display: flex;
+  }
+  .siteheader__brand {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .siteheader__brand .siteheader__name {
+    color: #fff;
+  }
+  .siteheader.is-stuck .siteheader__brand .siteheader__name {
+    color: var(--c-ink);
+  }
+  .siteheader.is-stuck .siteheader__mark {
+    border-color: var(--c-border-soft);
+  }
+
+  /* 모바일 드로어 메뉴 (JS .is-open) */
+  .mobnav {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    z-index: 199;
+    background: rgba(31, 31, 30, 0.97);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s var(--ease-out),
+      transform 0.3s var(--ease-out),
+      visibility 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 24px 24px;
+  }
+  .mobnav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .mobnav a {
+    padding: 16px 4px;
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+    color: #f4f4f4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .mobnav a.mobnav__cta {
+    margin-top: 16px;
+    border: 0;
+    text-align: center;
+    border-radius: 999px;
+    background: var(--c-accent);
+    color: #123c08;
+    font-weight: var(--fw-bold);
+  }
+
+  /* ---- 공통 모바일 타이포 (Figma Mobile 실측) ---- */
+  .eyebrow {
+    width: auto;
+    font-size: 16px;
+  }
+  .feed__title,
+  .culture__title,
+  .challenge__title {
+    width: auto;
+    font-size: 42px;
+  }
+  .lead {
+    width: auto;
+    font-size: 18px;
+  }
+  .lead--center {
+    font-size: 18px;
+  }
+
+  /* ===== MO_1 HERO ===== */
+  .section--hero .section__inner {
+    height: 788px !important;
+  }
+  .hero__phone {
+    display: none;
+  }
+  .hero__phone-mo {
+    display: block;
+    left: 14px !important;
+    top: -8px !important;
+    width: 413px;
+    height: 364px;
+  }
+  .logo {
+    left: 24px !important;
+    top: 417px !important;
+    gap: 7.86px;
+    height: 24px;
+  }
+  .logo__mark {
+    width: 19.86px;
+    height: 19.86px;
+    border-radius: 3.09px;
+    margin-top: 2.48px;
+  }
+  .logo__mark img {
+    width: 11px;
+    height: 16px;
+  }
+  .logo__text {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .hero__title {
+    left: 24px !important;
+    top: 465px !important;
+    width: 327px;
+    font-size: 44px;
+  }
+  .hero__qr {
+    left: 24px !important;
+    top: 668px !important;
+    width: 327px;
+    height: 80px;
+  }
+  .hero__qr-img {
+    width: 80px;
+    height: 80px;
+  }
+  .hero__qr-img > img {
+    width: 100%;
+  }
+  .hero__qr-grid {
+    width: 58px;
+    height: 58px;
+  }
+  .hero__qr-label {
+    left: 96px !important;
+    top: 30px !important;
+    width: 220px;
+    height: 50px;
+  }
+  .hero__qr-label p {
+    font-size: 16px;
+  }
+  .hero__qr-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ===== MO_2 INTRO ===== */
+  .section--intro .section__inner {
+    height: 438px !important;
+  }
+  .intro__title {
+    top: 104px !important;
+    font-size: 38px;
+    white-space: normal;
+    padding: 0 24px;
+  }
+  .intro__body {
+    top: 226px !important;
+    font-size: 20px;
+    white-space: normal;
+    padding: 0 18px;
+  }
+
+  /* ===== MO_3 FEED ===== */
+  .section--feed .section__inner {
+    height: 972px !important;
+  }
+  .section--feed .eyebrow {
+    left: 24px !important;
+    top: 72px !important;
+  }
+  .section--feed .feed__title {
+    left: 24px !important;
+    top: 103px !important;
+    width: 327px;
+  }
+  .section--feed .lead {
+    left: 24px !important;
+    top: 247px !important;
+    width: 280px;
+  }
+  .section--feed .phone {
+    left: 39px !important;
+    top: 347px !important;
+    transform: scale(0.6694);
+    transform-origin: top left;
+  }
+  .section--feed .float-card {
+    left: 273px !important;
+    top: 466px !important;
+    width: 219px !important;
+    height: 211px !important;
+  }
+
+  /* ===== MO_4 AI ===== */
+  .section--ai .section__inner {
+    height: 987px !important;
+  }
+  .section--ai .eyebrow {
+    left: 24px !important;
+    top: 72px !important;
+  }
+  .section--ai .feed__title {
+    left: 24px !important;
+    top: 103px !important;
+    width: 327px;
+    font-size: 38px;
+  }
+  .section--ai .lead {
+    left: 24px !important;
+    top: 247px !important;
+    width: 300px;
+  }
+  .section--ai .phone {
+    left: 51px !important;
+    top: 321px !important;
+    transform: scale(0.6894);
+    transform-origin: top left;
+  }
+  .section--ai .bubble {
+    z-index: 6;
+  }
+  .section--ai .bubble--green {
+    left: 114px !important;
+    top: 490px !important;
+    width: 245px !important;
+    padding: 12px 15px;
+  }
+  .section--ai .bubble--green p {
+    font-size: 14px;
+    white-space: normal;
+  }
+  .section--ai .bubble--white {
+    left: 28px !important;
+    top: 795px !important;
+    width: 319px !important;
+    padding: 16px 18px;
+  }
+  .section--ai .bubble--white p {
+    font-size: 16px;
+    white-space: normal;
+  }
+  .section--ai .chip {
+    left: 28px !important;
+    top: 735px !important;
+  }
+  .section--ai .chip__name {
+    left: 92px !important;
+    top: 746px !important;
+    font-size: 20px;
+  }
+  .section--ai .mascot {
+    left: 197px !important;
+    top: 610px !important;
+    width: 188px !important;
+    height: 166px !important;
+    z-index: 5;
+  }
+
+  /* ===== MO_5 CULTURE ===== */
+  .section--culture .section__inner {
+    height: 695px !important;
+  }
+  .section--culture .section__bg-img {
+    background-position: 50% 30%;
+    opacity: 0.6;
+  }
+  .section--culture .section__bg-grad {
+    background:
+      linear-gradient(166deg, rgba(0, 0, 0, 0.92) 12%, rgba(0, 0, 0, 0) 52%),
+      linear-gradient(40deg, rgba(0, 0, 0, 0.92) 35%, rgba(0, 0, 0, 0) 100%);
+  }
+  .section--culture .eyebrow {
+    left: 24px !important;
+    top: 72px !important;
+  }
+  .section--culture .culture__title {
+    left: 24px !important;
+    top: 103px !important;
+    width: 327px;
+  }
+  .section--culture .lead {
+    left: 24px !important;
+    top: 247px !important;
+    width: 327px;
+  }
+  .section--culture .phone {
+    left: 33px !important;
+    top: 373px !important;
+    transform: scale(0.6173);
+    transform-origin: top left;
+  }
+
+  /* ===== MO_6 COMMUNITY ===== */
+  .section--community .section__inner {
+    height: 698px !important;
+  }
+  .section--community .eyebrow {
+    left: 24px !important;
+    top: 72px !important;
+  }
+  .section--community .feed__title {
+    left: 24px !important;
+    top: 103px !important;
+    width: 327px;
+  }
+  .section--community .lead {
+    left: 24px !important;
+    top: 247px !important;
+    width: 327px;
+  }
+  .section--community .review {
+    transform-origin: top left;
+  }
+  .section--community .review:nth-of-type(1) {
+    left: 24px !important;
+    top: 348px !important;
+    transform: scale(0.6875);
+  }
+  .section--community .review:nth-of-type(2) {
+    left: 63px !important;
+    top: 413px !important;
+    transform: scale(0.896);
+    z-index: 3;
+  }
+  .section--community .review:nth-of-type(3) {
+    left: 36px !important;
+    top: 523px !important;
+    transform: scale(0.6875);
+    z-index: 2;
+  }
+
+  /* ===== MO_7 CHALLENGE ===== */
+  .section--challenge .section__inner {
+    height: 855px !important;
+  }
+  .section--challenge .eyebrow--center {
+    top: 72px !important;
+  }
+  .section--challenge .challenge__title {
+    top: 103px !important;
+    font-size: 42px;
+  }
+  .section--challenge .lead--center {
+    top: 247px !important;
+    width: 327px;
+    left: 24px !important;
+    right: auto !important;
+  }
+  .shoe img {
+    height: 100%;
+  }
+  .section--challenge .shoe:nth-of-type(1) {
+    left: -39px !important;
+    top: 417px !important;
+    width: 142px !important;
+    height: 135px !important;
+  }
+  .section--challenge .shoe:nth-of-type(2) {
+    left: 66px !important;
+    top: 342px !important;
+    width: 252px !important;
+    height: 258px !important;
+  }
+  .section--challenge .shoe:nth-of-type(3) {
+    left: 275px !important;
+    top: 416px !important;
+    width: 133px !important;
+    height: 135px !important;
+  }
+  .track__rail {
+    left: 82px !important;
+    top: 641px !important;
+    width: 340px !important;
+    height: 16px;
+  }
+  .track__fill {
+    left: -51px !important;
+    top: 641px !important;
+    height: 16px;
+  }
+  .marker {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .marker__dot {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .section--challenge .marker:nth-of-type(1) {
+    left: 36px !important;
+    top: 633px !important;
+  }
+  .section--challenge .marker:nth-of-type(2) {
+    left: 172px !important;
+    top: 633px !important;
+  }
+  .section--challenge .marker:nth-of-type(3) {
+    left: 307px !important;
+    top: 633px !important;
+  }
+  .marker__dot--gold {
+    left: 44px !important;
+    top: 641px !important;
+  }
+  .marker__dot--green {
+    left: 180px !important;
+    top: 641px !important;
+  }
+  .track__label {
+    width: auto;
+    font-size: 13px;
+  }
+  .section--challenge .track__label:nth-of-type(1) {
+    left: 22px !important;
+    top: 679px !important;
+  }
+  .section--challenge .track__label:nth-of-type(2) {
+    left: 158px !important;
+    top: 679px !important;
+  }
+  .gs25 {
+    left: 281px !important;
+    top: 679px !important;
+    width: 84px !important;
+    height: 52px !important;
+  }
+  .track__label--strong {
+    left: 280px !important;
+    top: 739px !important;
+    width: 90px !important;
+    font-size: 14px;
+  }
+
+  /* ===== MO_8 CTA ===== */
+  .section--cta .section__inner {
+    height: 506px !important;
+  }
+  .section--cta .cta__bg {
+    left: -212px !important;
+    top: 226px !important;
+    width: 804px !important;
+    height: 603px !important;
+  }
+  .section--cta .cta__bg-grad {
+    background: linear-gradient(
+      165deg,
+      var(--c-green) 16%,
+      rgba(111, 213, 95, 0) 51%,
+      var(--c-green) 86%
+    );
+  }
+  .cta__title {
+    left: 29px !important;
+    top: 120px !important;
+    width: 317px;
+    font-size: 36px;
+    text-align: center;
+  }
+  .cta__body {
+    left: 29px !important;
+    top: 226px !important;
+    width: 317px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .cta__badge--blank {
+    left: 119px !important;
+    top: 302px !important;
+    width: 136px !important;
+    height: 136px !important;
+    background: #fff;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+  .cta__badge--blank > img {
+    width: 100%;
+  }
+  /* 상단 중앙 로고 심볼 (MO_8) : f3 배지 대신 맨 심볼만 */
+  .cta__badge--logo {
+    left: 154px !important;
+    top: 24px !important;
+    width: 68px !important;
+    height: 68px !important;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .cta__badge--logo .cta__logo {
+    position: absolute;
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cta__badge--logo .cta__logo img {
+    width: auto;
+    height: 86%;
+    max-width: 70%;
+    filter: brightness(0) invert(1);
+  }
+  .section--cta .cta__bg {
+    z-index: 0;
+  }
+}
